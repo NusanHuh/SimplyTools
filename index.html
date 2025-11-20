@@ -41,6 +41,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.05);
         }
 
         .headerlogodanteks {
@@ -102,6 +103,19 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .containerisisesungguhnyadua {
+            width: 100%;
+            height: fit-content;
+            padding: 50px;
+            background-color: rgba(251, 243, 209, 0.5);
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-top: 20px;
         }
 
 
@@ -226,13 +240,6 @@
 
 
 
-        .pinfo3 {
-            color: #2b2d31;
-            font-family: UbuntuRe;
-            font-size: 15px;
-            display: block;
-        }
-
         .morse {
             display: none;
         }
@@ -295,8 +302,7 @@
             display: flex;
             align-items: center;
             background-color: #fff;
-            position: absolute;
-            bottom: 0;
+            position: relative;
         }
 
         .footer img {
@@ -310,6 +316,60 @@
             margin-left: 10px;
         }
 
+        .pinfotools {
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 35px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: UbuntuRe;
+            color: #2b2d31;
+            font-size: 12.5px;
+            border-radius: 50px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .h1title {
+            color: #2b2d31;
+            font-family: UbuntuBo;
+            font-size: 40px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        .pinfofofo {
+            font-family: UbuntuRe;
+            color: #2b2d31;
+            margin-top: 20px;
+            font-size: 13px;
+            width: 100%;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .btngithub {
+            padding-left: 15px;
+            padding-right: 15px;
+            height: 35px;
+            background-color: #2b2d31;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-size: 13px;
+            border-radius: 7px;
+            margin-top: 20px;
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hilangdarilandpak, .hilangdarilandpak2, .hilangdarilandpak3, .hilangdarilandpak4 {
+            display: flex;
+        }
+
         @media only screen and (max-width: 720px) {
             .containermorsedanbin {
                 grid-template-columns: repeat(1, 1fr);
@@ -321,6 +381,10 @@
             }
 
             .containerisisesungguhnya {
+                padding: 23px;
+            }
+
+            .containerisisesungguhnyadua {
                 padding: 23px;
             }
 
@@ -378,7 +442,10 @@
 
     <div id="containerisi" class="containerisi">
         <div class="containerisisesungguhnya">
-            <p class="pinfo3">Pilih tools yang berada di menu atas.</p>
+            <p class="pinfotools hilangdarilandpak">Pilih tools dari menu di atas</p>
+            <h1 class="h1title hilangdarilandpak2">Penyedia alat bantu sederhana dalam satu halaman.</h1>
+            <p class="pinfofofo hilangdarilandpak3">Website ini menyediakan beberapa alat yang mungkin berguna bagi anda, SimplyTools menyediakan alat teks ke kode morse dan sebaliknya lalu teks ke biner dan sebaliknya lalu pengukuran kalkulator BMI yang sesuai dengan rumusnya.</p>
+            <button onclick="window.location.href = `https://github.com/NusanHuh/SimplyTools`" class="btngithub hilangdarilandpak4">Github SimplyTools</button>
 
             <div class="containermorsedanbin morse">
                 <div class="teksBN">
@@ -440,7 +507,7 @@
     <footer class="footer">
         <img src="./smadring.jpg" alt="logo">
 
-        <p class="pinfosmadring">Dibuat oleh siswa Smadring</p>
+        <p class="pinfosmadring">Dibuat oleh Aditya dan Agus</p>
     </footer>
 
     <script>
@@ -756,21 +823,26 @@
                 document.querySelector(".morse").style.display = "grid";
                 document.querySelector(".binn").style.display = "none";
                 document.querySelector(".BMI").style.display = "none";
-                document.querySelector(".pinfo3").style.display = "none";
-
-                document.querySelector(".footer").style.position = "relative";
+                document.querySelector(".hilangdarilandpak").style.display = "none";
+                document.querySelector(".hilangdarilandpak2").style.display = "none";
+                document.querySelector(".hilangdarilandpak3").style.display = "none";
+                document.querySelector(".hilangdarilandpak4").style.display = "none";
             } else if (window.location.hash === "#binn") {
                 document.querySelector(".morse").style.display = "none";
                 document.querySelector(".binn").style.display = "grid";
                 document.querySelector(".BMI").style.display = "none";
-                document.querySelector(".pinfo3").style.display = "none";
-                document.querySelector(".footer").style.position = "relative";
+                document.querySelector(".hilangdarilandpak").style.display = "none";
+                document.querySelector(".hilangdarilandpak2").style.display = "none";
+                document.querySelector(".hilangdarilandpak3").style.display = "none";
+                document.querySelector(".hilangdarilandpak4").style.display = "none";
             } else if (window.location.hash === "#bmi") {
                 document.querySelector(".morse").style.display = "none";
                 document.querySelector(".binn").style.display = "none";
                 document.querySelector(".BMI").style.display = "grid";
-                document.querySelector(".pinfo3").style.display = "none";
-                document.querySelector(".footer").style.position = "relative";
+                document.querySelector(".hilangdarilandpak").style.display = "none";
+                document.querySelector(".hilangdarilandpak2").style.display = "none";
+                document.querySelector(".hilangdarilandpak3").style.display = "none";
+                document.querySelector(".hilangdarilandpak4").style.display = "none";
             }
         });
 
@@ -779,20 +851,26 @@
                 document.querySelector(".morse").style.display = "grid";
                 document.querySelector(".binn").style.display = "none";
                 document.querySelector(".BMI").style.display = "none";
-                document.querySelector(".pinfo3").style.display = "none";
-                document.querySelector(".footer").style.position = "relative";
+                document.querySelector(".hilangdarilandpak").style.display = "none";
+                document.querySelector(".hilangdarilandpak2").style.display = "none";
+                document.querySelector(".hilangdarilandpak3").style.display = "none";
+                document.querySelector(".hilangdarilandpak4").style.display = "none";
             } else if (window.location.hash === "#binn") {
                 document.querySelector(".morse").style.display = "none";
                 document.querySelector(".binn").style.display = "grid";
                 document.querySelector(".BMI").style.display = "none";
-                document.querySelector(".pinfo3").style.display = "none";
-                document.querySelector(".footer").style.position = "relative";
+                document.querySelector(".hilangdarilandpak").style.display = "none";
+                document.querySelector(".hilangdarilandpak2").style.display = "none";
+                document.querySelector(".hilangdarilandpak3").style.display = "none";
+                document.querySelector(".hilangdarilandpak4").style.display = "none";
             } else if (window.location.hash === "#bmi") {
                 document.querySelector(".morse").style.display = "none";
                 document.querySelector(".binn").style.display = "none";
                 document.querySelector(".BMI").style.display = "grid";
-                document.querySelector(".pinfo3").style.display = "none";
-                document.querySelector(".footer").style.position = "relative";
+                document.querySelector(".hilangdarilandpak").style.display = "none";
+                document.querySelector(".hilangdarilandpak2").style.display = "none";
+                document.querySelector(".hilangdarilandpak3").style.display = "none";
+                document.querySelector(".hilangdarilandpak4").style.display = "none";
             }
         });
     </script>
